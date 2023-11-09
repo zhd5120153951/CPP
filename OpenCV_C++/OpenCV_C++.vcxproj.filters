@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="源文件\C++常用操作">
+      <UniqueIdentifier>{3d50e66e-19bf-4fbb-9e89-33e7847a9636}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\C++常用操作\图片拼接">
+      <UniqueIdentifier>{d7d67816-fdf4-4771-b374-191eb7c01ed4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件\C++常用操作">
+      <UniqueIdentifier>{99fdc260-d961-407b-a3ef-afe515dd9fc3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件\C++常用操作\图片拼接">
+      <UniqueIdentifier>{81e88bb8-1bfd-41cc-be4c-cb8e9689520d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件\C++常用操作\图片拼接\results">
+      <UniqueIdentifier>{45c8d93b-e556-4d95-8361-d5357a08c24a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\C++常用操作\运动目标检测">
+      <UniqueIdentifier>{6c461562-2c95-452b-9ee3-453015e533ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件\C++常用操作\运动目标检测">
+      <UniqueIdentifier>{e333bb46-d7df-4749-997e-fff54c21de79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件\C++常用操作\运动目标检测\results">
+      <UniqueIdentifier>{f1108d1f-15cf-4505-9ffc-9fdad51eaa24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\C++常用操作">
+      <UniqueIdentifier>{66654bfe-6189-4fbf-bf7d-11ec4e3cd611}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\C++常用操作\运动目标检测">
+      <UniqueIdentifier>{27dd2f0e-c7b4-45a1-9682-462a4a81f980}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\C++常用操作\图片拼接">
+      <UniqueIdentifier>{066a8822-30cb-4104-b76b-4b8ec1423f30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\C++常用操作\mask">
+      <UniqueIdentifier>{bd8a4ec0-de19-4381-911c-49016a96ae18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\C++常用操作\mask">
+      <UniqueIdentifier>{e16ec6af-990e-4ef5-a28e-e64b7f328773}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件\C++常用操作\mask">
+      <UniqueIdentifier>{7e8e95d7-a619-4c05-b483-4c97b9640d7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件\C++常用操作\mask\results">
+      <UniqueIdentifier>{16f93e1e-e0a1-4bab-a509-81006d698fec}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C++常用操作\图片拼接\pinjie.cpp">
+      <Filter>源文件\C++常用操作\图片拼接</Filter>
+    </ClCompile>
+    <ClCompile Include="C++常用操作\运动目标检测\motion1.cpp">
+      <Filter>源文件\C++常用操作\运动目标检测</Filter>
+    </ClCompile>
+    <ClCompile Include="C++常用操作\运动目标检测\motion2.cpp">
+      <Filter>源文件\C++常用操作\运动目标检测</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="C++常用操作\mask\mask.cpp">
+      <Filter>源文件\C++常用操作\mask</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="C++常用操作\图片拼接\pinjie1.jpg">
+      <Filter>资源文件\C++常用操作\图片拼接</Filter>
+    </Image>
+    <Image Include="C++常用操作\图片拼接\pinjie2.jpg">
+      <Filter>资源文件\C++常用操作\图片拼接</Filter>
+    </Image>
+    <Image Include="C++常用操作\图片拼接\pinjie3.jpg">
+      <Filter>资源文件\C++常用操作\图片拼接</Filter>
+    </Image>
+    <Image Include="C++常用操作\图片拼接\results\结果.png">
+      <Filter>资源文件\C++常用操作\图片拼接\results</Filter>
+    </Image>
+    <Image Include="C++常用操作\图片拼接\results\拼接后.png">
+      <Filter>资源文件\C++常用操作\图片拼接\results</Filter>
+    </Image>
+    <Image Include="C++常用操作\运动目标检测\results\背景减除法.png">
+      <Filter>资源文件\C++常用操作\运动目标检测\results</Filter>
+    </Image>
+    <Image Include="C++常用操作\运动目标检测\results\混合高斯模型.png">
+      <Filter>资源文件\C++常用操作\运动目标检测\results</Filter>
+    </Image>
+    <Image Include="C++常用操作\mask\1.jpg">
+      <Filter>资源文件\C++常用操作\mask</Filter>
+    </Image>
+    <Image Include="C++常用操作\mask\2.jpg">
+      <Filter>资源文件\C++常用操作\mask</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C++常用操作\图片拼接\README.md">
+      <Filter>资源文件\C++常用操作\图片拼接</Filter>
+    </None>
+    <None Include="C++常用操作\运动目标检测\Laboratory_raw.avi">
+      <Filter>资源文件\C++常用操作\运动目标检测</Filter>
+    </None>
+    <None Include="C++常用操作\运动目标检测\README.md">
+      <Filter>资源文件\C++常用操作\运动目标检测</Filter>
+    </None>
+    <None Include="C++常用操作\mask\readme.md">
+      <Filter>资源文件\C++常用操作\mask</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="C++常用操作\运动目标检测\Test.mp4">
+      <Filter>资源文件\C++常用操作\运动目标检测</Filter>
+    </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C++常用操作\运动目标检测\motion.h">
+      <Filter>头文件\C++常用操作\运动目标检测</Filter>
+    </ClInclude>
+    <ClInclude Include="C++常用操作\图片拼接\pinjie.h">
+      <Filter>头文件\C++常用操作\图片拼接</Filter>
+    </ClInclude>
+    <ClInclude Include="C++常用操作\mask\mask.h">
+      <Filter>头文件\C++常用操作\mask</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
