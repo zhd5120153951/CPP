@@ -25,17 +25,11 @@
     <Filter Include="资源文件\C++常用操作\图片拼接">
       <UniqueIdentifier>{81e88bb8-1bfd-41cc-be4c-cb8e9689520d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="资源文件\C++常用操作\图片拼接\results">
-      <UniqueIdentifier>{45c8d93b-e556-4d95-8361-d5357a08c24a}</UniqueIdentifier>
-    </Filter>
     <Filter Include="源文件\C++常用操作\运动目标检测">
       <UniqueIdentifier>{6c461562-2c95-452b-9ee3-453015e533ea}</UniqueIdentifier>
     </Filter>
     <Filter Include="资源文件\C++常用操作\运动目标检测">
       <UniqueIdentifier>{e333bb46-d7df-4749-997e-fff54c21de79}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="资源文件\C++常用操作\运动目标检测\results">
-      <UniqueIdentifier>{f1108d1f-15cf-4505-9ffc-9fdad51eaa24}</UniqueIdentifier>
     </Filter>
     <Filter Include="头文件\C++常用操作">
       <UniqueIdentifier>{66654bfe-6189-4fbf-bf7d-11ec4e3cd611}</UniqueIdentifier>
@@ -55,8 +49,77 @@
     <Filter Include="资源文件\C++常用操作\mask">
       <UniqueIdentifier>{7e8e95d7-a619-4c05-b483-4c97b9640d7f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="资源文件\C++常用操作\mask\results">
-      <UniqueIdentifier>{16f93e1e-e0a1-4bab-a509-81006d698fec}</UniqueIdentifier>
+    <Filter Include="头文件\C++常用操作\布匹瑕疵检测小思路">
+      <UniqueIdentifier>{af079cf4-aecb-4f2c-af88-375e980ca48c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\C++常用操作\抠图案例">
+      <UniqueIdentifier>{378bac5b-cadb-4948-b6c6-8baec348edbc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\C++常用操作\人脸识别案例">
+      <UniqueIdentifier>{7e771f1e-65fc-44db-93d4-f30d59d1f7ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\C++常用操作\三帧帧差法">
+      <UniqueIdentifier>{1a32f70d-3eb4-4187-9bac-071b318132a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\C++常用操作\图像边缘-角点-轮廓检测">
+      <UniqueIdentifier>{ff16051b-d95b-410f-979f-a63984755b1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\C++常用操作\图像分割">
+      <UniqueIdentifier>{a7927219-6019-4c13-8049-0b27d9af3898}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\C++常用操作\图像增强">
+      <UniqueIdentifier>{18060bbc-945e-4a12-983d-339e559aa5fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\C++常用操作\颜色直方图比较">
+      <UniqueIdentifier>{6d02c731-3e47-432a-9bf9-4cdf3094226a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\C++常用操作\布匹瑕疵检测小思路">
+      <UniqueIdentifier>{94299ed9-825d-4a00-aa97-724cd2bec3ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\C++常用操作\抠图案例">
+      <UniqueIdentifier>{ec39dec1-4187-4396-8bc6-07f1f62ec599}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\C++常用操作\人脸识别案例">
+      <UniqueIdentifier>{54a9a61b-8f23-469d-a5c0-421badcd0706}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\C++常用操作\三帧帧差法">
+      <UniqueIdentifier>{3c9933f6-9af9-426e-87bf-69b6304e0d2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\C++常用操作\图像边缘-角点-轮廓检测">
+      <UniqueIdentifier>{f071af84-3c9f-4c44-bf69-29095dee1ba1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\C++常用操作\图像分割">
+      <UniqueIdentifier>{90db72f4-6acf-4a4d-a566-34202253acf6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\C++常用操作\图像增强">
+      <UniqueIdentifier>{032c360e-f1bf-4f74-b62f-dc56c206597d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\C++常用操作\颜色直方图比较">
+      <UniqueIdentifier>{0d41c19e-d4a0-44e6-bc0d-da431b1c5441}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件\C++常用操作\布匹瑕疵检测小思路">
+      <UniqueIdentifier>{5bd77733-9435-4cea-ad76-65a9d9694707}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件\C++常用操作\抠图案例">
+      <UniqueIdentifier>{e04dd34e-ccea-4ffa-9d25-6bbbb4d771e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件\C++常用操作\人脸识别案例">
+      <UniqueIdentifier>{447849b2-92a3-4fe2-9ad9-521363a4f9dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件\C++常用操作\三帧帧差法">
+      <UniqueIdentifier>{87e7496e-b194-4c0a-a599-ca5191fb01fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件\C++常用操作\图像边缘-角点-轮廓检测">
+      <UniqueIdentifier>{b75fd747-b8cd-4067-a136-121d017824a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件\C++常用操作\图像分割">
+      <UniqueIdentifier>{611ea168-8d74-4256-9179-581d522bc3e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件\C++常用操作\图像增强">
+      <UniqueIdentifier>{902f4b99-b9bd-4052-841d-e916fc29d741}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件\C++常用操作\颜色直方图比较">
+      <UniqueIdentifier>{e7505bc6-44b9-4510-ace2-a9518f41929b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -75,42 +138,52 @@
     <ClCompile Include="C++常用操作\mask\mask.cpp">
       <Filter>源文件\C++常用操作\mask</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="C++常用操作\图片拼接\pinjie1.jpg">
-      <Filter>资源文件\C++常用操作\图片拼接</Filter>
-    </Image>
-    <Image Include="C++常用操作\图片拼接\pinjie2.jpg">
-      <Filter>资源文件\C++常用操作\图片拼接</Filter>
-    </Image>
-    <Image Include="C++常用操作\图片拼接\pinjie3.jpg">
-      <Filter>资源文件\C++常用操作\图片拼接</Filter>
-    </Image>
-    <Image Include="C++常用操作\图片拼接\results\结果.png">
-      <Filter>资源文件\C++常用操作\图片拼接\results</Filter>
-    </Image>
-    <Image Include="C++常用操作\图片拼接\results\拼接后.png">
-      <Filter>资源文件\C++常用操作\图片拼接\results</Filter>
-    </Image>
-    <Image Include="C++常用操作\运动目标检测\results\背景减除法.png">
-      <Filter>资源文件\C++常用操作\运动目标检测\results</Filter>
-    </Image>
-    <Image Include="C++常用操作\运动目标检测\results\混合高斯模型.png">
-      <Filter>资源文件\C++常用操作\运动目标检测\results</Filter>
-    </Image>
-    <Image Include="C++常用操作\mask\1.jpg">
-      <Filter>资源文件\C++常用操作\mask</Filter>
-    </Image>
-    <Image Include="C++常用操作\mask\2.jpg">
-      <Filter>资源文件\C++常用操作\mask</Filter>
-    </Image>
+    <ClCompile Include="C++常用操作\颜色直方图比较\Hist.cpp">
+      <Filter>源文件\C++常用操作\颜色直方图比较</Filter>
+    </ClCompile>
+    <ClCompile Include="C++常用操作\图像增强\对数LOG变换.cpp">
+      <Filter>源文件\C++常用操作\图像增强</Filter>
+    </ClCompile>
+    <ClCompile Include="C++常用操作\图像增强\伽马变换.cpp">
+      <Filter>源文件\C++常用操作\图像增强</Filter>
+    </ClCompile>
+    <ClCompile Include="C++常用操作\图像增强\直方图均衡化.cpp">
+      <Filter>源文件\C++常用操作\图像增强</Filter>
+    </ClCompile>
+    <ClCompile Include="C++常用操作\图像分割\Grabcut算法.cpp">
+      <Filter>源文件\C++常用操作\图像分割</Filter>
+    </ClCompile>
+    <ClCompile Include="C++常用操作\图像分割\分水岭算法.cpp">
+      <Filter>源文件\C++常用操作\图像分割</Filter>
+    </ClCompile>
+    <ClCompile Include="C++常用操作\图像分割\均值漂移.cpp">
+      <Filter>源文件\C++常用操作\图像分割</Filter>
+    </ClCompile>
+    <ClCompile Include="C++常用操作\图像分割\漫水填充.cpp">
+      <Filter>源文件\C++常用操作\图像分割</Filter>
+    </ClCompile>
+    <ClCompile Include="C++常用操作\图像边缘-角点-轮廓检测\edge_corner_outline.cpp">
+      <Filter>源文件\C++常用操作\图像边缘-角点-轮廓检测</Filter>
+    </ClCompile>
+    <ClCompile Include="C++常用操作\三帧帧差法\diff_3_frame_image.cpp">
+      <Filter>源文件\C++常用操作\三帧帧差法</Filter>
+    </ClCompile>
+    <ClCompile Include="C++常用操作\三帧帧差法\diff_3_frame_video.cpp">
+      <Filter>源文件\C++常用操作\三帧帧差法</Filter>
+    </ClCompile>
+    <ClCompile Include="C++常用操作\人脸识别案例\face.cpp">
+      <Filter>源文件\C++常用操作\人脸识别案例</Filter>
+    </ClCompile>
+    <ClCompile Include="C++常用操作\抠图案例\koutu.cpp">
+      <Filter>源文件\C++常用操作\抠图案例</Filter>
+    </ClCompile>
+    <ClCompile Include="C++常用操作\布匹瑕疵检测小思路\xiaci.cpp">
+      <Filter>源文件\C++常用操作\布匹瑕疵检测小思路</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="C++常用操作\图片拼接\README.md">
       <Filter>资源文件\C++常用操作\图片拼接</Filter>
-    </None>
-    <None Include="C++常用操作\运动目标检测\Laboratory_raw.avi">
-      <Filter>资源文件\C++常用操作\运动目标检测</Filter>
     </None>
     <None Include="C++常用操作\运动目标检测\README.md">
       <Filter>资源文件\C++常用操作\运动目标检测</Filter>
@@ -118,11 +191,33 @@
     <None Include="C++常用操作\mask\readme.md">
       <Filter>资源文件\C++常用操作\mask</Filter>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Media Include="C++常用操作\运动目标检测\Test.mp4">
-      <Filter>资源文件\C++常用操作\运动目标检测</Filter>
-    </Media>
+    <None Include="C++常用操作\颜色直方图比较\README.md">
+      <Filter>资源文件\C++常用操作\颜色直方图比较</Filter>
+    </None>
+    <None Include="C++常用操作\图像增强\README.md">
+      <Filter>资源文件\C++常用操作\图像增强</Filter>
+    </None>
+    <None Include="C++常用操作\图像分割\README.md">
+      <Filter>资源文件\C++常用操作\图像分割</Filter>
+    </None>
+    <None Include="C++常用操作\图像边缘-角点-轮廓检测\README.md">
+      <Filter>资源文件\C++常用操作\图像边缘-角点-轮廓检测</Filter>
+    </None>
+    <None Include="C++常用操作\三帧帧差法\README.md">
+      <Filter>资源文件\C++常用操作\三帧帧差法</Filter>
+    </None>
+    <None Include="C++常用操作\人脸识别案例\README.md">
+      <Filter>资源文件\C++常用操作\人脸识别案例</Filter>
+    </None>
+    <None Include="C++常用操作\抠图案例\README.md">
+      <Filter>资源文件\C++常用操作\抠图案例</Filter>
+    </None>
+    <None Include="C++常用操作\布匹瑕疵检测小思路\README.md">
+      <Filter>资源文件\C++常用操作\布匹瑕疵检测小思路</Filter>
+    </None>
+    <None Include="C++常用操作\README.md">
+      <Filter>资源文件</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="C++常用操作\运动目标检测\motion.h">
@@ -136,6 +231,30 @@
     </ClInclude>
     <ClInclude Include="resource.h">
       <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="C++常用操作\颜色直方图比较\Hist.h">
+      <Filter>头文件\C++常用操作\颜色直方图比较</Filter>
+    </ClInclude>
+    <ClInclude Include="C++常用操作\图像增强\Argument.h">
+      <Filter>头文件\C++常用操作\图像增强</Filter>
+    </ClInclude>
+    <ClInclude Include="C++常用操作\图像分割\segement.h">
+      <Filter>头文件\C++常用操作\图像分割</Filter>
+    </ClInclude>
+    <ClInclude Include="C++常用操作\图像边缘-角点-轮廓检测\edge_corner_outline.h">
+      <Filter>头文件\C++常用操作\图像边缘-角点-轮廓检测</Filter>
+    </ClInclude>
+    <ClInclude Include="C++常用操作\三帧帧差法\diff_frame.h">
+      <Filter>头文件\C++常用操作\三帧帧差法</Filter>
+    </ClInclude>
+    <ClInclude Include="C++常用操作\人脸识别案例\face.h">
+      <Filter>头文件\C++常用操作\人脸识别案例</Filter>
+    </ClInclude>
+    <ClInclude Include="C++常用操作\抠图案例\koutu.h">
+      <Filter>头文件\C++常用操作\抠图案例</Filter>
+    </ClInclude>
+    <ClInclude Include="C++常用操作\布匹瑕疵检测小思路\xiaci.h">
+      <Filter>头文件\C++常用操作\布匹瑕疵检测小思路</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

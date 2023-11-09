@@ -133,35 +133,51 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="C++常用操作\mask\mask.cpp" />
+    <ClCompile Include="C++常用操作\三帧帧差法\diff_3_frame_image.cpp" />
+    <ClCompile Include="C++常用操作\三帧帧差法\diff_3_frame_video.cpp" />
+    <ClCompile Include="C++常用操作\人脸识别案例\face.cpp" />
+    <ClCompile Include="C++常用操作\图像分割\Grabcut算法.cpp" />
+    <ClCompile Include="C++常用操作\图像分割\分水岭算法.cpp" />
+    <ClCompile Include="C++常用操作\图像分割\均值漂移.cpp" />
+    <ClCompile Include="C++常用操作\图像分割\漫水填充.cpp" />
+    <ClCompile Include="C++常用操作\图像增强\伽马变换.cpp" />
+    <ClCompile Include="C++常用操作\图像增强\对数LOG变换.cpp" />
+    <ClCompile Include="C++常用操作\图像增强\直方图均衡化.cpp" />
+    <ClCompile Include="C++常用操作\图像边缘-角点-轮廓检测\edge_corner_outline.cpp" />
     <ClCompile Include="C++常用操作\图片拼接\pinjie.cpp" />
+    <ClCompile Include="C++常用操作\布匹瑕疵检测小思路\xiaci.cpp" />
+    <ClCompile Include="C++常用操作\抠图案例\koutu.cpp" />
     <ClCompile Include="C++常用操作\运动目标检测\motion1.cpp" />
     <ClCompile Include="C++常用操作\运动目标检测\motion2.cpp" />
+    <ClCompile Include="C++常用操作\颜色直方图比较\Hist.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="C++常用操作\mask\1.jpg" />
-    <Image Include="C++常用操作\mask\2.jpg" />
-    <Image Include="C++常用操作\图片拼接\pinjie1.jpg" />
-    <Image Include="C++常用操作\图片拼接\pinjie2.jpg" />
-    <Image Include="C++常用操作\图片拼接\pinjie3.jpg" />
-    <Image Include="C++常用操作\图片拼接\results\拼接后.png" />
-    <Image Include="C++常用操作\图片拼接\results\结果.png" />
-    <Image Include="C++常用操作\运动目标检测\results\混合高斯模型.png" />
-    <Image Include="C++常用操作\运动目标检测\results\背景减除法.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="C++常用操作\mask\readme.md" />
+    <None Include="C++常用操作\README.md" />
+    <None Include="C++常用操作\三帧帧差法\README.md" />
+    <None Include="C++常用操作\人脸识别案例\README.md" />
+    <None Include="C++常用操作\图像分割\README.md" />
+    <None Include="C++常用操作\图像增强\README.md" />
+    <None Include="C++常用操作\图像边缘-角点-轮廓检测\README.md" />
     <None Include="C++常用操作\图片拼接\README.md" />
-    <None Include="C++常用操作\运动目标检测\Laboratory_raw.avi" />
+    <None Include="C++常用操作\布匹瑕疵检测小思路\README.md" />
+    <None Include="C++常用操作\抠图案例\README.md" />
     <None Include="C++常用操作\运动目标检测\README.md" />
-  </ItemGroup>
-  <ItemGroup>
-    <Media Include="C++常用操作\运动目标检测\Test.mp4" />
+    <None Include="C++常用操作\颜色直方图比较\README.md" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="C++常用操作\mask\mask.h" />
+    <ClInclude Include="C++常用操作\三帧帧差法\diff_frame.h" />
+    <ClInclude Include="C++常用操作\人脸识别案例\face.h" />
+    <ClInclude Include="C++常用操作\图像分割\segement.h" />
+    <ClInclude Include="C++常用操作\图像增强\Argument.h" />
+    <ClInclude Include="C++常用操作\图像边缘-角点-轮廓检测\edge_corner_outline.h" />
     <ClInclude Include="C++常用操作\图片拼接\pinjie.h" />
+    <ClInclude Include="C++常用操作\布匹瑕疵检测小思路\xiaci.h" />
+    <ClInclude Include="C++常用操作\抠图案例\koutu.h" />
     <ClInclude Include="C++常用操作\运动目标检测\motion.h" />
+    <ClInclude Include="C++常用操作\颜色直方图比较\Hist.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
