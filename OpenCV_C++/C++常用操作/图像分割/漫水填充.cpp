@@ -1,13 +1,19 @@
-#include <opencv2/opencv.hpp>    
-using namespace cv;
+#include "segement.h"
+#include <opencv2/opencv.hpp>
+#include <opencv2/highgui/highgui.hpp>
+#include <opencv2/core/core.hpp> 
+#include <opencv2/imgproc/imgproc.hpp>
+#include <iostream>
 
-int main()
+using namespace std;
+using namespace cv;
+int main_manshui()
 {
-	Mat src = imread("Fruits.jpg");
-	imshow("��ԭʼͼ��", src);
+	Mat src = imread("./C++常用操作/图像分割/Fruits.jpg");
+	imshow("img", src);
 	Rect ccomp;
 	floodFill(src, Point(50, 300), Scalar(155, 255, 55), &ccomp, Scalar(20, 20, 20), Scalar(20, 20, 20));
-	imshow("��Ч��ͼ��", src);
+	imshow("ret", src);
 	waitKey(0);
 	return 0;
 }

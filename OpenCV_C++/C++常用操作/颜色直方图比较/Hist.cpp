@@ -1,12 +1,12 @@
+#include "Hist.h"  
 #include<opencv2/opencv.hpp>  
 #include<iostream>  
 #include<vector>  
-using namespace cv;  
-using namespace std;  
-
-int main()  
+using namespace cv;
+using namespace std;
+int main_Hist()  
 {  
-    Mat srcImage = imread("1.jpg");  
+    Mat srcImage = imread("./C++常用操作/颜色直方图比较/1.jpg");  
     Mat compareImage = imread("2.jpg");  
     imshow("【原图】", srcImage);  
     imshow("【需要比较的图像】", compareImage);  
@@ -14,8 +14,8 @@ int main()
     //在比较直方图时，最佳操作是在HSV空间中操作，所以需要将BGR空间转换为HSV空间  
     Mat srcHsvImage;  
     Mat compareHsvImage;  
-    cvtColor(srcImage, srcHsvImage, CV_BGR2HSV);  
-    cvtColor(compareImage, compareHsvImage, CV_BGR2HSV);  
+    cvtColor(srcImage, srcHsvImage, COLOR_BGR2HSV);  
+    cvtColor(compareImage, compareHsvImage, COLOR_BGR2HSV);  
   
     //采用H-S直方图进行处理  
     //首先得配置直方图的参数  

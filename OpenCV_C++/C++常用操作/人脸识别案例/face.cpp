@@ -1,9 +1,12 @@
+#include "face.h"
 #include<opencv2\opencv.hpp>
 using namespace cv;
 using namespace std;
-void onMouse(int event, int x, int y, int flags, void* userdata);
+
 Rect rect;
-Mat src,roiImg, result;
+Mat src, roiImg, result;
+
+void onMouse(int event, int x, int y, int flags, void* userdata);
 void showImg();
 
 void getBinMask(const Mat& comMask, Mat& binMask)
@@ -11,79 +14,78 @@ void getBinMask(const Mat& comMask, Mat& binMask)
 	binMask.create(comMask.size(), CV_8UC1);
 	binMask = comMask & 1;
 }
-int main(int arc, char** argv) { 
-	src = imread("1.jpg");
-	namedWindow("input", CV_WINDOW_AUTOSIZE);
+int main_face(int arc, char** argv) 
+{ 
+	src = imread("./C++常用操作/人脸识别案例/1.jpg");
+	namedWindow("input", WINDOW_AUTOSIZE);
 	imshow("input", src); 
 	setMouseCallback("input", onMouse);		
 	Mat result = Mat::zeros(src.size(), CV_8UC1);
 	Mat bgModel, fgModel;
 	char c = waitKey(0);
-	if (c == 'g') {
-		Mat image = imread("1.jpg", 1);
+	if (c == 'g')
+	{
+		Mat image = imread("./C++常用操作/人脸识别案例/1.jpg", 1);
 		Mat bg; Mat fg;
 		Mat mask, res;
 		mask.create(image.size(), CV_8UC1);
-		grabCut(image, mask, rect, bg, fg,2, 0);
+		grabCut(image, mask, rect, bg, fg, 2, 0);
 		Mat binMask;
 		getBinMask(mask, binMask);
 		image.copyTo(res, binMask);
 		Mat res_clone = res.clone();
-		imshow("1",res_clone);
-		imshow("2",mask);
-		imshow("3",binMask);
+		imshow("1", res_clone);
+		imshow("2", mask);
+		imshow("3", binMask);
 
 
 		Mat img = imread("2.jpg");
 
-	imshow("display", img);
-	
+		imshow("display", img);
 
-	CascadeClassifier cascade;
 
-	const string path = "haarcascade_frontalface_alt.xml";
-	if ( ! cascade.load(path))
-	{
-		cout << "cascade load failed!\n";
-	}
-	
+		CascadeClassifier cascade;
 
-	vector<Rect> faces(0);
-	cascade.detectMultiScale(img, faces, 1.1, 2, 0 ,Size(30,30));
- 
-	cout << "detect face number is :" << faces.size() << endl;
-
-	
-	if (faces.size() > 0)
-	{
-		for (size_t i = 0;i < faces.size();i++)
+		const string path = "haarcascade_frontalface_alt.xml";
+		if (!cascade.load(path))
 		{
-			rectangle(img, faces[i], Scalar(150, 0, 0), 3, 8, 0);
-
-			//cv::Mat logo = cv::imread("1.jpg");
-
-			//cv::Mat mask = cv::imread("1.jpg",0);
-
-			cv::Mat imageROI;
-			//mask.create(res_clone.size(), CV_8UC1);
-			imageROI = img(cv::Rect(faces[i].x-100,faces[i].y-100,res_clone.cols,res_clone.rows));
-
-			res_clone.copyTo(imageROI,binMask);
-
-			cv::namedWindow("result");
-
-			cv::imshow("result",img);
- 
+			cout << "cascade load failed!\n";
 		}
-	}
-	else{
-		cout << "未检测到人脸" << endl;
-	}
- 
 
- 
 
-	imshow("face_detect", img);
+		vector<Rect> faces(0);
+		cascade.detectMultiScale(img, faces, 1.1, 2, 0, Size(30, 30));
+
+		cout << "detect face number is :" << faces.size() << endl;
+
+
+		if (faces.size() > 0)
+		{
+			for (size_t i = 0; i < faces.size(); i++)
+			{
+				rectangle(img, faces[i], Scalar(150, 0, 0), 3, 8, 0);
+
+				//cv::Mat logo = cv::imread("1.jpg");
+
+				//cv::Mat mask = cv::imread("1.jpg",0);
+
+				cv::Mat imageROI;
+				//mask.create(res_clone.size(), CV_8UC1);
+				imageROI = img(cv::Rect(faces[i].x - 100, faces[i].y - 100, res_clone.cols, res_clone.rows));
+
+				res_clone.copyTo(imageROI, binMask);
+
+				cv::namedWindow("result");
+
+				cv::imshow("result", img);
+
+			}
+		}
+		else {
+			cout << "未检测到人脸" << endl;
+		}
+
+		imshow("face_detect", img);
 	}
 	waitKey(0); 
 	return 0;
@@ -94,23 +96,26 @@ void showImg() {
 	imshow("input", roiImg);
 }
 //鼠标选择矩形框
-void onMouse(int event, int x, int y, int flags, void* userdata){
+void onMouse(int event, int x, int y, int flags, void* userdata)
+{
 	switch (event)
 	{
-	case CV_EVENT_LBUTTONDOWN://鼠标左键按下事件
+	case EVENT_LBUTTONDOWN://鼠标左键按下事件
 		rect.x = x;
 		rect.y = y;
 		rect.width = 1;
 		rect.height = 1;
 		break;
-	case CV_EVENT_MOUSEMOVE://鼠标移动事件
-		if (flags && CV_EVENT_FLAG_LBUTTON) {
+	case EVENT_MOUSEMOVE://鼠标移动事件
+		if (flags && EVENT_FLAG_LBUTTON)
+		{
 			rect = Rect(Point(rect.x, rect.y), Point(x, y));
 			showImg();
 		}
 		break;
 	case EVENT_LBUTTONUP://鼠标弹起事件
-		if (rect.width > 1 && rect.height > 1) {
+		if (rect.width > 1 && rect.height > 1)
+		{
 			showImg();
 		}
 		break;

@@ -1,32 +1,37 @@
-
+#include "koutu.h"
 #include<opencv2\opencv.hpp>
+#include <iostream>
 using namespace cv;
-void onMouse(int event, int x, int y, int flags, void* userdata);
-Rect rect;
-Mat src,roiImg, result;
-void showImg();
+using namespace std;
+Rect rect_koutu;
+Mat src_koutu, roiImg_koutu, result_koutu;
 
-void getBinMask(const Mat& comMask, Mat& binMask)
+void onMouse_koutu(int event, int x, int y, int flags, void* userdata);
+void showImg_koutu();
+
+void getBinMask_koutu(const Mat& comMask, Mat& binMask)
 {
 	binMask.create(comMask.size(), CV_8UC1);
 	binMask = comMask & 1;
 }
-int main(int arc, char** argv) { 
-	src = imread("test2.jpg");
-	namedWindow("input", CV_WINDOW_AUTOSIZE);
-	imshow("input", src); 
-	setMouseCallback("input", onMouse);		
-	Mat result = Mat::zeros(src.size(), CV_8UC1);
+int main_koutu(int arc, char** argv)
+{ 
+	src_koutu = imread("./C++常用操作/抠图案例/test2.jpg");
+	namedWindow("input", WINDOW_AUTOSIZE);
+	imshow("input", src_koutu); 
+	setMouseCallback("input", onMouse_koutu);		
+	Mat result = Mat::zeros(src_koutu.size(), CV_8UC1);
 	Mat bgModel, fgModel;
 	char c = waitKey(0);
-	if (c == 'g') {
-		Mat image = imread("test2.jpg", 1);
+	if (c == 'g') 
+	{
+		Mat image = imread("./C++常用操作/抠图案例/test2.jpg", 1);
 		Mat bg; Mat fg;
 		Mat mask, res;
 		mask.create(image.size(), CV_8UC1);
-		grabCut(image, mask, rect, bg, fg,2, 0);
+		grabCut(image, mask, rect_koutu, bg, fg,2, 0);
 		Mat binMask;
-		getBinMask(mask, binMask);
+		getBinMask_koutu(mask, binMask);
 		image.copyTo(res, binMask);
 		Mat res_clone = res.clone();
 		Mat background;
@@ -34,7 +39,7 @@ int main(int arc, char** argv) {
 		imshow("dst", background);
 		Mat imageGray;
 		//转换为灰度图
-		cvtColor(background, imageGray, CV_RGB2GRAY, 0);
+		cvtColor(background, imageGray, COLOR_RGB2GRAY, 0);
 		Mat imageMask = Mat(background.size(), CV_8UC1, Scalar::all(0));
 		//通过阈值处理生成Mask
 		threshold(imageGray, imageMask, 1, 255, THRESH_BINARY_INV);//240-1 CV_THRESH_BINARY-THRESH_BINARY_INV
@@ -59,30 +64,34 @@ int main(int arc, char** argv) {
 	waitKey(0); 
 	return 0;
 }
-void showImg() {
-	src.copyTo(roiImg);
-	rectangle(roiImg, rect, Scalar(0, 0, 255), 2);
-	imshow("input", roiImg);
+void showImg_koutu()
+{
+	src_koutu.copyTo(roiImg_koutu);
+	rectangle(roiImg_koutu, rect_koutu, Scalar(0, 0, 255), 2);
+	imshow("input", roiImg_koutu);
 }
 //鼠标选择矩形框
-void onMouse(int event, int x, int y, int flags, void* userdata){
+void onMouse_koutu(int event, int x, int y, int flags, void* userdata)
+{
 	switch (event)
 	{
-	case CV_EVENT_LBUTTONDOWN://鼠标左键按下事件
-		rect.x = x;
-		rect.y = y;
-		rect.width = 1;
-		rect.height = 1;
+	case EVENT_LBUTTONDOWN://鼠标左键按下事件
+		rect_koutu.x = x;
+		rect_koutu.y = y;
+		rect_koutu.width = 1;
+		rect_koutu.height = 1;
 		break;
-	case CV_EVENT_MOUSEMOVE://鼠标移动事件
-		if (flags && CV_EVENT_FLAG_LBUTTON) {
-			rect = Rect(Point(rect.x, rect.y), Point(x, y));
-			showImg();
+	case EVENT_MOUSEMOVE://鼠标移动事件
+		if (flags && EVENT_FLAG_LBUTTON)
+		{
+			rect_koutu = Rect(Point(rect_koutu.x, rect_koutu.y), Point(x, y));
+			showImg_koutu();
 		}
 		break;
 	case EVENT_LBUTTONUP://鼠标弹起事件
-		if (rect.width > 1 && rect.height > 1) {
-			showImg();
+		if (rect_koutu.width > 1 && rect_koutu.height > 1)
+		{
+			showImg_koutu();
 		}
 		break;
 	default:

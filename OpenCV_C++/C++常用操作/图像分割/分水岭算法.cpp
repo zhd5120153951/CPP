@@ -1,18 +1,23 @@
+#include "segement.h"
 #include <opencv2/opencv.hpp>
+#include <opencv2/highgui/highgui.hpp>
+#include <opencv2/core/core.hpp> 
+#include <opencv2/imgproc/imgproc.hpp>
 #include <iostream>
-using namespace cv;
+
 using namespace std;
+using namespace cv;
 
 Vec3b RandomColor(int value);  //生成随机颜色函数
 
-int main( int argc, char* argv[] )
+int main_Fenshuilin( int argc, char* argv[])
 {
-	Mat image=imread("lena.jpg");    //载入RGB彩色图像
+	Mat image=imread("./C++常用操作/图像分割/lena.jpg");    //载入RGB彩色图像
 	imshow("Source Image",image);
 
 	//灰度化，滤波，Canny边缘检测
 	Mat imageGray;
-	cvtColor(image,imageGray,CV_RGB2GRAY);//灰度转换
+	cvtColor(image,imageGray,COLOR_RGB2GRAY);//灰度转换
 	GaussianBlur(imageGray,imageGray,Size(5,5),2);   //高斯滤波
 	imshow("Gray Image",imageGray); 
 	Canny(imageGray,imageGray,80,150);  
@@ -71,6 +76,7 @@ int main( int argc, char* argv[] )
 	imshow("AddWeighted Image",wshed);
 
 	waitKey();
+	return 0;
 }
 
 

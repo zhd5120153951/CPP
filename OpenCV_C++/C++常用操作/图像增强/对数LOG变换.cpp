@@ -1,10 +1,12 @@
+#include "Argument.h"
 #include <opencv2/highgui/highgui.hpp>      
 #include <opencv2/imgproc/imgproc.hpp>  
-using namespace cv;  
-
-int main(int argc, char *argv[])  
+#include <iostream>
+using namespace cv;
+using namespace std;
+int main_log(int argc, char *argv[])  
 {  
-    Mat image = imread("Test.jpg");  
+    Mat image = imread("./C++常用操作/图像增强/Test.jpg");  
     Mat imageLog(image.size(), CV_32FC3);  
     for (int i = 0; i < image.rows; i++)  
     {  
@@ -15,12 +17,12 @@ int main(int argc, char *argv[])
             imageLog.at<Vec3f>(i, j)[2] = log(float(1 + image.at<Vec3b>(i, j)[2]));  
         }  
     }  
-    //��һ����0~255    
-    normalize(imageLog, imageLog, 0, 255, CV_MINMAX);  
-    //ת����8bitͼ����ʾ    
+    
+    normalize(imageLog, imageLog, 0, 255, NORM_MINMAX);
+    
     convertScaleAbs(imageLog, imageLog);  
     imshow("Soure", image);  
-    imshow("����LOG�任", imageLog);  
+    imshow("log_ret", imageLog);  
     waitKey();    
     return 0;  
 }

@@ -1,30 +1,34 @@
+#include "xiaci.h"
 #include <opencv2/opencv.hpp>
+#include <opencv2/highgui/highgui.hpp>
+#include <opencv2/core/core.hpp>
 #include <iostream>
 #include <math.h>
 
 using namespace std;
 using namespace cv;
-Mat src, gray_src, drawImg;
+
+Mat src_xiaci, gray_src, drawImg;
 int threshold_v = 231;
 int threshold_max = 255;
 const char* output_win = "rectangle-demo";
 const char* binary_win = "binary image";
 RNG rng(12345);
 void Contours_Callback(int, void*);
-void cvtColor_src(Mat &src, Mat &dst);
+void cvtColor_src(Mat& src, Mat& dst);
 
-int main(int argc, char** argv) {
-	src = imread("test_img.jpg");
+int main_xiaci(int argc, char** argv) 
+{
+	src_xiaci = imread("./C++常用操作/布匹瑕疵检测小思路/test_img.jpg");
 
-
-	cvtColor(src, gray_src, CV_BGR2GRAY);
+	cvtColor(src_xiaci, gray_src, COLOR_BGR2GRAY);
 	//cvtColor_src(src,gray_src);
 	blur(gray_src, gray_src, Size(3, 3), Point(-1, -1));
 
 	const char* source_win = "input image";
 	namedWindow(source_win, 0);
 	namedWindow(output_win, 0);
-	imshow(source_win, src);
+	imshow(source_win, src_xiaci);
 
 	createTrackbar("Threshold Value:", output_win, &threshold_v, threshold_max, Contours_Callback);
 	Contours_Callback(0, 0);
@@ -36,26 +40,31 @@ int main(int argc, char** argv) {
 void cvtColor_src(Mat &src, Mat &src_gray)
 {
 	//  转换单通道
-	if (src.channels() == 4) {
-		cv::cvtColor(src, src_gray, CV_BGRA2GRAY);
+	if (src.channels() == 4) 
+	{
+		cv::cvtColor(src, src_gray, COLOR_BGRA2GRAY);
 	}
-	else if (src.channels() == 3) {
-		cv::cvtColor(src, src_gray, CV_BGR2GRAY);
+	else if (src.channels() == 3) 
+	{
+		cv::cvtColor(src, src_gray, COLOR_BGR2GRAY);
 	}
-	else if (src.channels() == 2) {
-		cv::cvtColor(src, src_gray, CV_BGR5652GRAY);
+	else if (src.channels() == 2) 
+	{
+		cv::cvtColor(src, src_gray, COLOR_BGR5652GRAY);
 	}
-	else if (src.channels() == 1) {// 单通道的图片直接就不需要处理
+	else if (src.channels() == 1) 
+	{// 单通道的图片直接就不需要处理
 		src_gray = src;
 	}
-	else { // 负数,说明图有问题 直接返回	
+	else 
+	{ // 负数,说明图有问题 直接返回	
 		src_gray = src;
 	}
 
 }
 
-
-void Contours_Callback(int, void*) {
+void Contours_Callback(int, void*)
+{
 	Mat binary_output;
 	vector<vector<Point>> contours;
 	vector<Vec4i> hierachy;
@@ -81,12 +90,16 @@ void Contours_Callback(int, void*) {
 	vector<RotatedRect> minRects(contours.size());
 	vector<RotatedRect> myellipse(contours.size());
 
-	for (size_t i = 0; i < contours.size(); i++) {
-		try{
-				approxPolyDP(Mat(contours[i]), contours_ploy[i], 10, true);
-			}catch(cv::Exception& e) {
-				printf("exception: %s\n",e.what());
-			}
+	for (size_t i = 0; i < contours.size(); i++) 
+	{
+		try
+		{
+			approxPolyDP(Mat(contours[i]), contours_ploy[i], 10, true);
+		}
+		catch(cv::Exception& e) 
+		{
+			printf("exception: %s\n",e.what());
+		}
 
 		ploy_rects[i] = boundingRect(contours_ploy[i]);
 		//minEnclosingCircle(contours_ploy[i], ccs[i], radius[i]);
@@ -97,9 +110,10 @@ void Contours_Callback(int, void*) {
 	}
 
 	// draw it
-	src.copyTo(drawImg);
+	src_xiaci.copyTo(drawImg);
 	Point2f pts[4];
-	for (size_t t = 0; t < contours.size(); t++) {
+	for (size_t t = 0; t < contours.size(); t++) 
+	{
 		//Scalar color = Scalar(rng.uniform(0, 255), rng.uniform(0, 255), rng.uniform(0, 255));
 		rectangle(drawImg, ploy_rects[t], (0,255,255), 10, 8);
 		//circle(drawImg, ccs[t], radius[t], color, 2, 8);

@@ -1,10 +1,10 @@
-
+#include "edge_corner_outline.h"
 #include <opencv2/opencv.hpp>  
 using namespace cv;
 using namespace std;
-int main()
-{ 
-	Mat srcImage = imread("Fruits.jpg");  //载入图像 
+int main_edge_corner_outline()
+{
+	Mat srcImage = imread("./C++常用操作/图像边缘-角点-轮廓检测/Fruits.jpg");  //载入图像 
 	imshow("srcImage", srcImage);
 
 	//Canny边缘检测
@@ -51,7 +51,7 @@ int main()
 	Mat scaledImage;//线性变换后的八位无符号整型的图 
 	Mat g_srcImage, g_grayImage;
 	g_srcImage = srcImage.clone();//载入原始图并进行克隆保存
-	cvtColor(g_srcImage, g_grayImage, CV_BGR2GRAY);//存留一张灰度图  
+	cvtColor(g_srcImage, g_grayImage, COLOR_BGR2GRAY);//存留一张灰度图  
 	cornerHarris(g_grayImage, dstImage, 2, 3, 0.04, BORDER_DEFAULT);
 	cornerHarris(g_grayImage, dstImage, 2, 3, 0.04, BORDER_DEFAULT);
 	normalize(dstImage, normImage, 0, 255, NORM_MINMAX, CV_32FC1, Mat());
@@ -72,26 +72,27 @@ int main()
 	imshow(" Harris 角点检测 ", g_srcImage);
 
 	//ShiTomasi 角点检测
-		vector<Point2f> corners;
-		int maxCorners = 30;
-		double qualityLevel = 0.01;  
-		double minDistance = 10;  
-		int blockSize = 3;  
-		bool useHarrisDetector = false;  
-		double k = 0.04;  
-		goodFeaturesToTrack( g_grayImage,   
-               corners,  
-               maxCorners,  
-               qualityLevel,  
-               minDistance,  
-               Mat(),  
-               blockSize,  
-               useHarrisDetector,  
-               k ); 
-		  for( int i = 0; i < corners.size(); i++ ){   
-      //circle( dst_norm_scaled,  corners[i], 5,  Scalar(255), 2, 8, 0 );   
-      circle( srcImage, corners[i], 5, Scalar(0, 10, 255), 2, 8, 0 );   
-  }  
+	vector<Point2f> corners;
+	int maxCorners = 30;
+	double qualityLevel = 0.01;
+	double minDistance = 10;
+	int blockSize = 3;
+	bool useHarrisDetector = false;
+	double k = 0.04;
+	goodFeaturesToTrack(g_grayImage,
+		corners,
+		maxCorners,
+		qualityLevel,
+		minDistance,
+		Mat(),
+		blockSize,
+		useHarrisDetector,
+		k);
+	for (int i = 0; i < corners.size(); i++)
+	{
+		//circle( dst_norm_scaled,  corners[i], 5,  Scalar(255), 2, 8, 0 );   
+		circle(srcImage, corners[i], 5, Scalar(0, 10, 255), 2, 8, 0);
+	}
 	imshow(" ShiTomasi 角点检测 ", g_srcImage);
 	waitKey(0);
 	return 0;
