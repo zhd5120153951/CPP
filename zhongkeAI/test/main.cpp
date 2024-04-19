@@ -1,42 +1,24 @@
-#ifdef _WIN32
+#include <iostream>
 #include <windows.h>
-#include <stdio.h>
-#else
-#include <dlfcn.h>
-#endif
-// 定义导出类的函数指针类型
-typedef int (*funcPtr)(int, int);
+#include "GreatechAI.h"
+using namespace std;
 int main() 
 {
-    // 加载动态库
-#ifdef _WIN32
-    HINSTANCE hDll = LoadLibrary("zhongkeAI.dll");
-#else
-    void* handle = dlopen("./zhongkeAI.so", RTLD_LAZY);
-#endif
-    if (!hDll) 
+    //加载dll
+    HINSTANCE hDLL = LoadLibrary("yolov5.dll");
+    if (!hDLL)
     {
-        return -1;//dll加载失败
+        cerr << "加载yolov5.dll失败..." << endl;
+        return -1;
     }
-    // 获取导出类的函数指针
-    funcPtr func_add = (funcPtr)GetProcAddress(hDll, "add");
-    if (!func_add) 
-    {
-        // 处理获取函数指针失败的情况
-        return -2;
-    }
-    // 调用导出类的方法
-    int result = func_add(42,28);
-
-    // 打印结果
-    printf("加法结果：%d\n", result);
+    //获取函数指针
+    typedef GreatechAI* (*CreateGreatechAI)();
+    CreateGreatechAI createFunc = (CreateGreatechAI)GetProcAddress(hDLL, "createExportClass");
+    //使用导出类
+	GreatechAI* greatechAI = createFunc();
+    greatechAI->builder_init();
+    greatechAI->builder_buildEngine("yolov5s.onnx", "yolov5s.engine");
+    
     system("pause");
-    // 卸载动态库
-#ifdef _WIN32
-    FreeLibrary(hDll);
-#else
-    dlclose(handle);
-#endif
-
     return 0;
 }
