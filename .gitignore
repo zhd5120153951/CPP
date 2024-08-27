@@ -39,6 +39,6 @@ __pycache__/
 
 # vs 2022的.sln
 *.sln
-/AlgorithmYolov5/test/*.vcxproj
-/AlgorithmYolov5/test/*.vcxproj.filters
-/AlgorithmYolov5/test/*.vcxproj.user
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
